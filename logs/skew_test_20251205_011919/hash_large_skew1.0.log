@@ -1,0 +1,208 @@
+=== Dispatcher: Routing to task [skew] ===
+Running Skew Experiment with args: hash large 1.0
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+25/12/05 01:26:33 INFO SparkContext: Running Spark version 1.6.3
+25/12/05 01:26:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/05 01:26:33 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+25/12/05 01:26:33 WARN Utils: Your hostname, ds113 resolves to a loopback address: 127.0.1.1; using 49.52.27.113 instead (on interface enp94s0f0)
+25/12/05 01:26:33 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+25/12/05 01:26:33 INFO SecurityManager: Changing view acls to: syzhu
+25/12/05 01:26:33 INFO SecurityManager: Changing modify acls to: syzhu
+25/12/05 01:26:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(syzhu); users with modify permissions: Set(syzhu)
+25/12/05 01:26:33 INFO Utils: Successfully started service 'sparkDriver' on port 45511.
+25/12/05 01:26:34 INFO Slf4jLogger: Slf4jLogger started
+25/12/05 01:26:34 INFO Remoting: Starting remoting
+25/12/05 01:26:34 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@49.52.27.113:42117]
+25/12/05 01:26:34 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 42117.
+25/12/05 01:26:34 INFO SparkEnv: Registering MapOutputTracker
+25/12/05 01:26:34 INFO SparkEnv: Registering BlockManagerMaster
+25/12/05 01:26:34 INFO DiskBlockManager: Created local directory at /tmp/spark/work/blockmgr-27a007b1-a0a7-42c9-9380-c8829733acd9
+25/12/05 01:26:34 INFO MemoryStore: MemoryStore started with capacity 511.1 MB
+25/12/05 01:26:34 INFO SparkEnv: Registering OutputCommitCoordinator
+25/12/05 01:26:34 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/12/05 01:26:34 INFO SparkUI: Started SparkUI at http://49.52.27.113:4040
+25/12/05 01:26:34 INFO HttpFileServer: HTTP File server directory is /tmp/spark/work/spark-41b65722-69f1-404e-b56d-4b572cb9354b/httpd-0b32072b-b04a-47b0-b6ad-6ee831f0055d
+25/12/05 01:26:34 INFO HttpServer: Starting HTTP Server
+25/12/05 01:26:34 INFO Utils: Successfully started service 'HTTP file server' on port 45513.
+25/12/05 01:26:34 INFO SparkContext: Added JAR file:/home/syzhu/shuffle-experiment-new/target/scala-2.10/spark-shuffle-experiment-2.0.0.jar at http://49.52.27.113:45513/jars/spark-shuffle-experiment-2.0.0.jar with timestamp 1764915994843
+25/12/05 01:26:34 INFO AppClient$ClientEndpoint: Connecting to master spark://49.52.27.113:7077...
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Connected to Spark cluster with app ID app-20251205012635-0203
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/0 on worker-20251203224515-49.52.27.60-35123 (49.52.27.60:35123) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/0 on hostPort 49.52.27.60:35123 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/1 on worker-20251203224515-49.52.27.60-35123 (49.52.27.60:35123) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/1 on hostPort 49.52.27.60:35123 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/2 on worker-20251203224515-49.52.27.60-35123 (49.52.27.60:35123) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/2 on hostPort 49.52.27.60:35123 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/3 on worker-20251203224515-49.52.27.60-35123 (49.52.27.60:35123) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/3 on hostPort 49.52.27.60:35123 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/4 on worker-20251203144508-49.52.27.65-34725 (49.52.27.65:34725) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/4 on hostPort 49.52.27.65:34725 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/5 on worker-20251203144508-49.52.27.65-34725 (49.52.27.65:34725) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/5 on hostPort 49.52.27.65:34725 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/6 on worker-20251203144508-49.52.27.65-34725 (49.52.27.65:34725) with 2 cores
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/6 on hostPort 49.52.27.65:34725 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46361.
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor added: app-20251205012635-0203/7 on worker-20251203144508-49.52.27.65-34725 (49.52.27.65:34725) with 2 cores
+25/12/05 01:26:35 INFO NettyBlockTransferService: Server created on 46361
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251205012635-0203/7 on hostPort 49.52.27.65:34725 with 2 cores, 2.0 GB RAM
+25/12/05 01:26:35 INFO BlockManagerMaster: Trying to register BlockManager
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/4 is now RUNNING
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/5 is now RUNNING
+25/12/05 01:26:35 INFO BlockManagerMasterEndpoint: Registering block manager 49.52.27.113:46361 with 511.1 MB RAM, BlockManagerId(driver, 49.52.27.113, 46361)
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/6 is now RUNNING
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/7 is now RUNNING
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/0 is now RUNNING
+25/12/05 01:26:35 INFO BlockManagerMaster: Registered BlockManager
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/1 is now RUNNING
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/2 is now RUNNING
+25/12/05 01:26:35 INFO AppClient$ClientEndpoint: Executor updated: app-20251205012635-0203/3 is now RUNNING
+25/12/05 01:26:35 INFO SparkDeploySchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+=== Shuffle 实验配置 ===
+Manager: hash
+Dataset: large
+Skew:    1.0 (0=Uniform, >0=Zipf)
+>>> 正在预热 (Cache & Count)...
+>>> 预热完成，记录数: 5000000
+
+=== 开始运行 hash-skew1.0 实验 ===
+25/12/05 01:31:34 WARN HeartbeatReceiver: Removing executor 6 with no recent heartbeats: 169001 ms exceeds timeout 120000 ms
+25/12/05 01:31:34 ERROR TaskSchedulerImpl: Lost executor 6 on 49.52.27.65: Executor heartbeat timed out after 169001 ms
+25/12/05 01:31:34 WARN TaskSetManager: Lost task 120.0 in stage 3.0 (TID 521, 49.52.27.65): ExecutorLostFailure (executor 6 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 169001 ms
+25/12/05 01:31:45 ERROR TaskSchedulerImpl: Lost executor 6 on 49.52.27.65: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+25/12/05 01:32:00 WARN TaskSetManager: Lost task 120.1 in stage 3.0 (TID 601, 49.52.27.65): FetchFailed(BlockManagerId(6, 49.52.27.65, 39791), shuffleId=1, mapId=79, reduceId=120, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to /49.52.27.65:39791
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:323)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:300)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:51)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:328)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:371)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:327)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:152)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:45)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:89)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:98)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:270)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: Failed to connect to /49.52.27.65:39791
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:216)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:167)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$1.createAndStart(NettyBlockTransferService.scala:90)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:140)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.access$200(RetryingBlockFetcher.java:43)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher$1.run(RetryingBlockFetcher.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused: /49.52.27.65:39791
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:224)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:289)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:528)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:111)
+	... 1 more
+
+)
+
+RESULT_CSV: hash,large,1.0,295379,7.88 GB,0,0KB
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.60/49.52.27.60:54210 is closed
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.65/49.52.27.65:52406 is closed
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.65/49.52.27.65:52410 is closed
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.60/49.52.27.60:54208 is closed
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.60/49.52.27.60:54176 is closed
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.65/49.52.27.65:52396 is closed
+java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.CallbackRunnable@732b52ad rejected from java.util.concurrent.ThreadPoolExecutor@66766b[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 77]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:133)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at org.spark-project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:133)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at scala.concurrent.Future$InternalCallbackExecutor$Batch$$anonfun$run$1.processBatch$1(Future.scala:643)
+	at scala.concurrent.Future$InternalCallbackExecutor$Batch$$anonfun$run$1.apply$mcV$sp(Future.scala:658)
+	at scala.concurrent.Future$InternalCallbackExecutor$Batch$$anonfun$run$1.apply(Future.scala:635)
+	at scala.concurrent.Future$InternalCallbackExecutor$Batch$$anonfun$run$1.apply(Future.scala:635)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.Future$InternalCallbackExecutor$Batch.run(Future.scala:634)
+	at scala.concurrent.Future$InternalCallbackExecutor$.scala$concurrent$Future$InternalCallbackExecutor$$unbatchedExecute(Future.scala:694)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:685)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:208)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:230)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anonfun$2.apply(NettyRpcEnv.scala:230)
+	at org.apache.spark.rpc.netty.RpcOutboxMessage.onFailure(Outbox.scala:71)
+	at org.apache.spark.network.client.TransportResponseHandler.failOutstandingRequests(TransportResponseHandler.java:110)
+	at org.apache.spark.network.client.TransportResponseHandler.channelUnregistered(TransportResponseHandler.java:124)
+	at org.apache.spark.network.server.TransportChannelHandler.channelUnregistered(TransportChannelHandler.java:94)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelUnregistered(DefaultChannelPipeline.java:739)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:659)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:627)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:111)
+	at java.lang.Thread.run(Thread.java:750)
+25/12/05 01:32:35 WARN Dispatcher: Message RemoteProcessDisconnected(49.52.27.60:54192) dropped.
+org.apache.spark.SparkException: Could not find OutputCommitCoordinator or it has been stopped.
+	at org.apache.spark.rpc.netty.Dispatcher.postMessage(Dispatcher.scala:163)
+	at org.apache.spark.rpc.netty.Dispatcher.postToAll(Dispatcher.scala:111)
+	at org.apache.spark.rpc.netty.NettyRpcHandler.connectionTerminated(NettyRpcEnv.scala:630)
+	at org.apache.spark.network.server.TransportRequestHandler.channelUnregistered(TransportRequestHandler.java:94)
+	at org.apache.spark.network.server.TransportChannelHandler.channelUnregistered(TransportChannelHandler.java:89)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelUnregistered(ChannelInboundHandlerAdapter.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelUnregistered(AbstractChannelHandlerContext.java:158)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelUnregistered(AbstractChannelHandlerContext.java:144)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelUnregistered(DefaultChannelPipeline.java:739)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:659)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:627)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:362)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:111)
+	at java.lang.Thread.run(Thread.java:750)
+25/12/05 01:32:35 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from 49.52.27.60/49.52.27.60:54192 is closed

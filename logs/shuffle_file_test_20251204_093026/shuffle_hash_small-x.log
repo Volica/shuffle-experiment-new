@@ -1,0 +1,93 @@
+=== Dispatcher: Routing to task [file] ===
+Running File Count Monitor with args: hash small-x
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+25/12/04 09:30:28 INFO SparkContext: Running Spark version 1.6.3
+25/12/04 09:30:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/12/04 09:30:29 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+25/12/04 09:30:29 WARN Utils: Your hostname, ds113 resolves to a loopback address: 127.0.1.1; using 49.52.27.113 instead (on interface enp94s0f0)
+25/12/04 09:30:29 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+25/12/04 09:30:29 INFO SecurityManager: Changing view acls to: syzhu
+25/12/04 09:30:29 INFO SecurityManager: Changing modify acls to: syzhu
+25/12/04 09:30:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(syzhu); users with modify permissions: Set(syzhu)
+25/12/04 09:30:29 INFO Utils: Successfully started service 'sparkDriver' on port 43061.
+25/12/04 09:30:29 INFO Slf4jLogger: Slf4jLogger started
+25/12/04 09:30:29 INFO Remoting: Starting remoting
+25/12/04 09:30:29 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@49.52.27.113:44615]
+25/12/04 09:30:29 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 44615.
+25/12/04 09:30:29 INFO SparkEnv: Registering MapOutputTracker
+25/12/04 09:30:29 INFO SparkEnv: Registering BlockManagerMaster
+25/12/04 09:30:29 INFO DiskBlockManager: Created local directory at /tmp/spark/work/blockmgr-5a62aed8-869d-4fd1-94a3-b875bde19f55
+25/12/04 09:30:29 INFO MemoryStore: MemoryStore started with capacity 143.3 MB
+25/12/04 09:30:29 INFO SparkEnv: Registering OutputCommitCoordinator
+25/12/04 09:30:30 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/12/04 09:30:30 INFO SparkUI: Started SparkUI at http://49.52.27.113:4040
+25/12/04 09:30:30 INFO HttpFileServer: HTTP File server directory is /tmp/spark/work/spark-3766a907-8660-4712-b104-48143d02a427/httpd-e06ac1bd-d81e-489b-8e1a-da2effbc80bb
+25/12/04 09:30:30 INFO HttpServer: Starting HTTP Server
+25/12/04 09:30:30 INFO Utils: Successfully started service 'HTTP file server' on port 37583.
+25/12/04 09:30:30 INFO SparkContext: Added JAR file:/home/syzhu/shuffle-experiment-new/target/scala-2.10/spark-shuffle-experiment-2.0.0.jar at http://49.52.27.113:37583/jars/spark-shuffle-experiment-2.0.0.jar with timestamp 1764858630317
+25/12/04 09:30:30 INFO AppClient$ClientEndpoint: Connecting to master spark://49.52.27.113:7077...
+25/12/04 09:30:30 INFO SparkDeploySchedulerBackend: Connected to Spark cluster with app ID app-20251204093030-0152
+25/12/04 09:30:30 INFO AppClient$ClientEndpoint: Executor added: app-20251204093030-0152/0 on worker-20251203224515-49.52.27.60-35123 (49.52.27.60:35123) with 2 cores
+25/12/04 09:30:30 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251204093030-0152/0 on hostPort 49.52.27.60:35123 with 2 cores, 1024.0 MB RAM
+25/12/04 09:30:30 INFO AppClient$ClientEndpoint: Executor added: app-20251204093030-0152/1 on worker-20251203144508-49.52.27.65-34725 (49.52.27.65:34725) with 2 cores
+25/12/04 09:30:30 INFO SparkDeploySchedulerBackend: Granted executor ID app-20251204093030-0152/1 on hostPort 49.52.27.65:34725 with 2 cores, 1024.0 MB RAM
+25/12/04 09:30:30 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37585.
+25/12/04 09:30:30 INFO NettyBlockTransferService: Server created on 37585
+25/12/04 09:30:30 INFO AppClient$ClientEndpoint: Executor updated: app-20251204093030-0152/0 is now RUNNING
+25/12/04 09:30:30 INFO AppClient$ClientEndpoint: Executor updated: app-20251204093030-0152/1 is now RUNNING
+25/12/04 09:30:30 INFO BlockManagerMaster: Trying to register BlockManager
+25/12/04 09:30:30 INFO BlockManagerMasterEndpoint: Registering block manager 49.52.27.113:37585 with 143.3 MB RAM, BlockManagerId(driver, 49.52.27.113, 37585)
+25/12/04 09:30:30 INFO BlockManagerMaster: Registered BlockManager
+25/12/04 09:30:30 ERROR SparkContext: Error initializing SparkContext.
+java.io.FileNotFoundException: File file:/tmp/spark-events does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:534)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:747)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:524)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:409)
+	at org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:100)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:549)
+	at edu.ecnu.FileCountMonitor$.run(FileCountMonitor.scala:37)
+	at edu.ecnu.MainEntry$.main(MainEntry.scala:20)
+	at edu.ecnu.MainEntry.main(MainEntry.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:731)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+25/12/04 09:30:31 INFO SparkUI: Stopped Spark web UI at http://49.52.27.113:4040
+25/12/04 09:30:31 INFO SparkDeploySchedulerBackend: Shutting down all executors
+25/12/04 09:30:31 INFO SparkDeploySchedulerBackend: Asking each executor to shut down
+25/12/04 09:30:31 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/12/04 09:30:31 INFO MemoryStore: MemoryStore cleared
+25/12/04 09:30:31 INFO BlockManager: BlockManager stopped
+25/12/04 09:30:31 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/12/04 09:30:31 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/12/04 09:30:31 INFO SparkContext: Successfully stopped SparkContext
+Exception in thread "main" java.io.FileNotFoundException: File file:/tmp/spark-events does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:534)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:747)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:524)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:409)
+	at org.apache.spark.scheduler.EventLoggingListener.start(EventLoggingListener.scala:100)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:549)
+	at edu.ecnu.FileCountMonitor$.run(FileCountMonitor.scala:37)
+	at edu.ecnu.MainEntry$.main(MainEntry.scala:20)
+	at edu.ecnu.MainEntry.main(MainEntry.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:731)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+25/12/04 09:30:31 INFO ShutdownHookManager: Shutdown hook called
+25/12/04 09:30:31 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+25/12/04 09:30:31 INFO ShutdownHookManager: Deleting directory /tmp/spark/work/spark-3766a907-8660-4712-b104-48143d02a427
+25/12/04 09:30:31 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+25/12/04 09:30:31 INFO ShutdownHookManager: Deleting directory /tmp/spark/work/spark-3766a907-8660-4712-b104-48143d02a427/httpd-e06ac1bd-d81e-489b-8e1a-da2effbc80bb
